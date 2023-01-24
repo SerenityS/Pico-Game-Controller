@@ -98,7 +98,6 @@ uint8_t const desc_hid_report_joy[] = {
 uint8_t const desc_hid_report_key[] = {
     GAMECON_REPORT_DESC_LIGHTS(HID_REPORT_ID(REPORT_ID_LIGHTS)),
     GAMECON_REPORT_DESC_NKRO(HID_REPORT_ID(REPORT_ID_KEYBOARD)),
-    TUD_HID_REPORT_DESC_MOUSE(HID_REPORT_ID(REPORT_ID_MOUSE))
 };
 
 // Invoked when received GET HID REPORT DESCRIPTOR
@@ -159,25 +158,22 @@ uint8_t const* tud_descriptor_configuration_cb(uint8_t index) {
 // array of pointer to string descriptors
 char const* string_desc_arr[] = {
     (const char[]){0x09, 0x04},  // 0: is supported language is English (0x0409)
-    "SpeedyPotato",              // 1: Manufacturer
-    "Pico Game Controller",      // 2: Product
+    "dj505",              // 1: Manufacturer
+    "PicoFX",      // 2: Product
     "123456",                    // 3: Serials, should use chip ID
-    "Button 1",
-    "Button 2",
-    "Button 3",
-    "Button 4",
-    "Button 5",
-    "Button 6",
-    "Button 7",
-    "Button 8",
-    "Button 9",
-    "Button 10",
-    "Red 1",
-    "Green 1",
-    "Blue 1",
-    "Red 2",
-    "Green 2",
-    "Blue 2",
+    "1P Left Bottom",
+    "1P Left Top",
+    "1P Center",
+    "1P Right Top",
+    "1P Right Bottom",
+    "2P Left Bottom",
+    "2P Left Top",
+    "2P Center",
+    "2P Right Top",
+    "2P Right Bottom",
+    "ESC",
+    "TAB",
+
 };
 
 static uint16_t _desc_str[64];
