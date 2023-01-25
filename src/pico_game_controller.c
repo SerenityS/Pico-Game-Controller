@@ -153,9 +153,9 @@ void init() {
   gpio_put(25, 1);
 
   // Set up WS2812B
-  pio = pio0;
-  uint offset2 = pio_add_program(pio, &ws2812_program);
-  ws2812_program_init(pio, 0, offset2, WS2812B_GPIO, 800000,
+  pio_1 = pio1;
+  uint offset2 = pio_add_program(pio_1, &ws2812_program);
+  ws2812_program_init(pio_1, 0, offset2, WS2812B_GPIO, 800000,
                       false);
 
   // Setup Button GPIO

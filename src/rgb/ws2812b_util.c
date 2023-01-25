@@ -37,5 +37,5 @@ static inline uint32_t color_wheel(uint16_t wheel_pos) {
  * @param pixel_grb The pixel color to set
  **/
 static inline void put_pixel(uint32_t pixel_grb) {
-  pio_sm_put_blocking(pio, 0, pixel_grb << 8u);
+  pio_sm_put_blocking(pio1, 0, pixel_grb << 8u);
 }
